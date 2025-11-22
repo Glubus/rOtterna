@@ -10,6 +10,11 @@ A desktop application for browsing and downloading Etterna song packs. Built wit
 - **Settings** - Configure HP drain rate, overall difficulty, and song path
 - **Modern UI** - Beautiful interface built with DaisyUI and Tailwind CSS
 
+## Planned Features
+
+- **Auto Collection Creation** - Automatically create collections in osu! for downloaded packs
+- **Auto Rating on Download** - Automatically rate maps during download between two rating ranges
+
 ## Prerequisites
 
 - [Node.js](https://nodejs.org/) (v18 or higher)
@@ -21,7 +26,7 @@ A desktop application for browsing and downloading Etterna song packs. Built wit
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/Glubus/rOtterna
 cd rOtterna
 ```
 
