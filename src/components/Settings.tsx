@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { invoke } from "@tauri-apps/api/core";
+import { open } from "@tauri-apps/plugin-dialog";
 
 interface Settings {
   hp_drain_rate: number;
@@ -52,12 +53,13 @@ export function Settings({ onBack }: SettingsProps = {}) {
 
   const handleSelectSongPath = async () => {
     try {
-      // Open file dialog to select directory
-      // Note: Tauri v2 doesn't have a built-in file dialog, we'll use a text input for now
-      // Or we can use tauri-plugin-dialog if needed
-      const path = prompt("Enter the song path (full directory path):");
-      if (path) {
-        setSettings((prev) => ({ ...prev, song_path: path }));
+      const selected = await open({
+        directory: true,
+        multiple: false,
+        title: "Select Song Directory",
+      });
+      if (selected && typeof selected === "string") {
+        setSettings((prev) => ({ ...prev, song_path: selected }));
       }
     } catch (err) {
       console.error("[Settings] Error selecting song path:", err);
