@@ -1,6 +1,6 @@
 [package]
 name = "rotterna"
-version = "0.1.0"
+version = "0.2.0"
 description = "A Tauri App"
 authors = ["Glubus"]
 edition = "2021"
@@ -30,4 +30,3 @@ zip = "6"
 rosu-map = "0.2"
 regex = "1"
 rhythm-open-exchange = "0.2.2"
-
