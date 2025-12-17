@@ -29,5 +29,5 @@ futures-util = "0.3"
 zip = "6"
 rosu-map = "0.2"
 regex = "1"
-rotterna-lib = "0.2.0"
+rhythm-open-exchange = "0.2.2"
 
